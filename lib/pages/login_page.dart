@@ -41,10 +41,11 @@ class _LoginPageState extends State<LoginPage> {
        if (resBodyOfLogin['success'] == true) {
          Fluttertoast.showToast(msg: "Login Successfully.");
         User userInfo = User.fromJson(resBodyOfLogin["userData"]);
+         print(resBodyOfLogin.runtimeType);
          Navigator.push(
            context,
            MaterialPageRoute(
-             builder: (context) => const HomePage(),
+             builder: (context) =>  HomePage(),
            ),
          );
          await RememberUserPrefs.saveRememberUser(userInfo);
@@ -97,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const HomePage(),
+                builder: (context) =>  HomePage(),
               ),
             ),
             child: const Text("Yes"),
@@ -130,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const HomePage(),
+                builder: (context) =>  HomePage(),
               ),
             ),
             child: const Text("Yes"),
@@ -150,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
 
 
                 Image.asset(
@@ -159,7 +160,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: Theme.of(context).colorScheme.primary,
                 ),
 
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
 
 
                 Text(
