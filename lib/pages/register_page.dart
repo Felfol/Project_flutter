@@ -6,7 +6,6 @@ import 'package:project_flutter/Api/Api_connection.dart';
 import 'package:project_flutter/model/user.dart';
 import '../components/my_button.dart';
 import '../components/my_textfield.dart';
-import 'home_page.dart';
 import 'package:http/http.dart' as http;
 
 import 'login_page.dart';
